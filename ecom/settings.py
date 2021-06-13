@@ -23,7 +23,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # forms
+    'crispy_forms',
+
+    #app 
+    'core',
 ]
+DEFAULT_FORM_EMAIL = env('DEFAULT_FORM_EMAIL')
+NOTIFY_EMAIL = env('NOTIFY_EMAIL')
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -86,8 +95,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/3.0/topics/i18n/
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+
+
 
 
 LANGUAGE_CODE = 'en-us'
