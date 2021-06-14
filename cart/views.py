@@ -13,4 +13,5 @@ class ProductListView(ListView):
 
 class ProductDetailView(DetailView):
     model = Product
-    template_name=''
+    template_name= 'cart/product_detail.html'
+    context_object_name = 'product'
