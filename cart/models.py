@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from django.db.models.expressions import F
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
+from django.urls import reverse
 
 User = get_user_model()
 
@@ -49,6 +50,10 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        
+        return reverse('cart:product-detail', args=[self.slug])
 
 class OrderItem(models.Model):
     order = models.ForeignKey("Order", related_name='items', on_delete=models.CASCADE)
