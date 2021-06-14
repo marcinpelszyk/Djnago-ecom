@@ -4,6 +4,7 @@
             <li><a href="/">Strona Główna</a></li>
             <li><a href="{% url 'cart:product-list' %}">Sklep</a></li>
             <li><a href="{% url 'contact' %}">Kontakt</a></li>
+            <li><a href="{% url 'contact' %}">Personel</a></li>
             {% if request.user.is_staff %}
                 <li><a href="/">Staff</a></li>
             {% endif %}
