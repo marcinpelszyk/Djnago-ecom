@@ -68,9 +68,9 @@ class OrderItem(models.Model):
 
    
 class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     start_date = models.DateTimeField(auto_now_add=True)
-    ordered_date = models.DateTimeField(auto_now=True)
+    ordered_date = models.DateTimeField(blank=True, null=True)
     ordered = models.BooleanField(default=False)
 
 
