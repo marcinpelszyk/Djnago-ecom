@@ -1,9 +1,9 @@
 <nav class="site-navigation text-right text-md-center" role="navigation">
     <div class="container">
         <ul class="site-menu js-clone-nav d-none d-md-block" style="padding: 0;">
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Shop</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="/">Strona Główna</a></li>
+            <li><a href="{% url 'cart:product-list' %}">Sklep</a></li>
+            <li><a href="{% url 'contact' %}">Kontakt</a></li>
             {% if request.user.is_staff %}
                 <li><a href="/">Staff</a></li>
             {% endif %}
